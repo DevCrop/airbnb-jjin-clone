@@ -1,15 +1,17 @@
-import Cards from "./components/Cards";
+import Cards from "./components/CardComponents/Cards";
 import HeaderNav from "./components/HeaderNav";
-
+import data from "../data.json";
+import Grid from "./components/Grid";
 
 function App() {
-
-
   return (
     <>
-     <HeaderNav/>
+      <HeaderNav />
+      <div className="container">
+        <Grid />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
