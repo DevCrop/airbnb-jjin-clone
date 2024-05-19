@@ -1,4 +1,5 @@
-
+import Cards from "./components/Cards";
+import HeaderNav from "./components/HeaderNav";
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-     <h1 className='hello'>hello world</h1>
+     <HeaderNav/>
     </>
   )
 }
