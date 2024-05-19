@@ -1,26 +1,96 @@
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 export default function CardImageBox() {
   return (
-    <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
-    </Swiper>
+    <div>
+      <Swiper
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
+        }}
+        spaceBetween={50}
+        slidesPerView={1}
+        lazy={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <img
+            src="https://swiperjs.com/demos/images/nature-1.jpg"
+            loading="lazy"
+          />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://swiperjs.com/demos/images/nature-2.jpg"
+            loading="lazy"
+          />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://swiperjs.com/demos/images/nature-3.jpg"
+            loading="lazy"
+          />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://swiperjs.com/demos/images/nature-4.jpg"
+            loading="lazy"
+          />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://swiperjs.com/demos/images/nature-5.jpg"
+            loading="lazy"
+          />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://swiperjs.com/demos/images/nature-6.jpg"
+            loading="lazy"
+          />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://swiperjs.com/demos/images/nature-7.jpg"
+            loading="lazy"
+          />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://swiperjs.com/demos/images/nature-8.jpg"
+            loading="lazy"
+          />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://swiperjs.com/demos/images/nature-9.jpg"
+            loading="lazy"
+          />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
   );
 }
