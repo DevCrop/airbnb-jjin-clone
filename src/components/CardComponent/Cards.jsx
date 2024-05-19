@@ -11,9 +11,13 @@ import '../styles.css'
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-export default function Cards() {
+export default function Cards({data}) {
   return (
     <>
+
+    <div>
+      {data.title}
+    </div>
 
     <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
         <SwiperSlide>Slide 1</SwiperSlide>
